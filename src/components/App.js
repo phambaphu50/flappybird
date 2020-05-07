@@ -1,12 +1,15 @@
 import React from 'react';
+
+import { Provider } from 'react-redux';
+
 import '../App.css';
 import Game from './Game';
 
-function App() {
+const App = ({ store }) => {
   return (
-    <div className="App">
+    <Provider store={store}>
       <Game />
-    </div>
+    </Provider>
   );
 }
 
