@@ -60,9 +60,7 @@ const start = (e) => {
     }
 }
 
-const mapStateToProps = ({game}) => ({
-    status: game.status
-})
+const mapStateToProps = ({game}) => ({status: game.status})
 const mapDispatchToProps = {start, fly}
 
 export default connect(mapStateToProps, mapDispatchToProps) (Game);

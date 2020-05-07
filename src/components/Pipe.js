@@ -1,7 +1,8 @@
 import React from "react"
 import { connect } from 'react-redux'
 
-import PipeBg from '../asset/images/pipe.png'
+import PipeTop from '../asset/images/pipe-top.png'
+import PipeBottom from '../asset/images/pipe.png'
 
 const Pipe = ({ x, pipes }) => {
   return (
@@ -16,7 +17,7 @@ const Pipe = ({ x, pipes }) => {
                 left: x + i * 200,
                 width: 52,
                 height: topHeight,
-                background: `url(${PipeBg})`,
+                background: `url(${PipeTop})`,
                 backgroundPosition: 'bottom',
                 transition: 'left 200ms'
               }}
@@ -28,8 +29,8 @@ const Pipe = ({ x, pipes }) => {
                 top: topHeight + 100,
                 left: x + i * 200,
                 width: 52,
-                height: 200,
-                background: `url(${PipeBg})`,
+                height: topHeight,
+                background: `url(${PipeBottom})`,
                 transition: 'left 200ms'
               }}
             ></div>
