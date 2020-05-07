@@ -12,7 +12,8 @@ const Bird = ({y, r}) => {
             width: 34,
             height: 24,
             background: `url(${ BirdIcon })`,
-            transform: `rotate(${r}deg)`
+            transform: `rotate(${r}deg)`,
+            transition: 'transform 200ms, top 200ms'
         }}></div>
     )
 }

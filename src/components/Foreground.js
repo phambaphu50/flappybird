@@ -1,4 +1,5 @@
 import React from 'react'
+import ForegroundImage from '../asset/images/base.png'
 
 const Foreground = () => {
     return (
@@ -7,7 +8,7 @@ const Foreground = () => {
             bottom: 0,
             width: 288,
             height: 100,
-            backgroundColor: 'brown'
+            background: `url(${ForegroundImage})`
 
         }}></div>
     )

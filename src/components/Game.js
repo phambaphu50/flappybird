@@ -20,14 +20,13 @@ const Game = ({status, start, fly}) => {
         document.addEventListener('keypress', handlePress);
     })
 
-    console.log(status)
-
     return (
         <div style={{
             position: 'relative',
             width: 288,
             height: 512,
-            background: `url(${ BgImage })`
+            background: `url(${ BgImage })`,
+            overflow: 'hidden'
         }}    
         >
             <Bird/>
@@ -49,7 +48,13 @@ const start = (e) => {
         if(status !== 'playing') {
             setInterval(() => {
                 dispatch({type: 'FALL'}) 
-            }, 200 )
+                dispatch({type: 'RUNNING'}) 
+            }, 300)
+
+            setInterval(() => {
+                dispatch({type: 'GENERATE'})
+            }, 3000)
+
             dispatch({type: 'START'})
         }
     }
